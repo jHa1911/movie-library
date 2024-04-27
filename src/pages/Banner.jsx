@@ -4,6 +4,7 @@ import './banner.css';
 import bgImg from '../pages/bg-transformer.jpg';
 import MovieContent from "../components/movieContent";
 import MovieDate from "../components/MovieDate";
+import PlayBtn from "../components/PlayBtn";
 
 
 function Banner() {
@@ -31,12 +32,7 @@ function Banner() {
                         </div>
                         <div className="col-lg-6 col-md-12">
                             <MovieDate />
-                            <div className="trailer d-flex align-items-center justify-content-center active">
-                                <a href="/" className="playBtn">
-                                    <ion-icon name="play-outline"></ion-icon>
-                                </a>
-                                <p>Watch  Trailer</p>
-                            </div>
+                            <PlayBtn />
                         </div>
                     </div>
                 </div>
