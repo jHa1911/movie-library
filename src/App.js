@@ -1,9 +1,11 @@
 import './App.css';
+import Header from './pages/Header';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Movie Library</h1>
+      <Header />
     </div>
   );
 }
