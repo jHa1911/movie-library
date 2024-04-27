@@ -1,6 +1,7 @@
 import React from 'react'
 import './movieContent.css'
 import titleImg from '../pages/transformer-title.png';
+import Button from './Button';
 
 function MovieContent() {
     return (
@@ -19,7 +20,18 @@ function MovieContent() {
                                     Mauris massa. Vestibulum lacinia arcu eget nulla. 
                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                                 </p>
-                                <div className="button">Button</div>
+                                <div className="button">
+                                    <Button icon={<ion-icon name="bookmark-outline"></ion-icon>}
+                                        name='Book'
+                                        color='#ff3700' 
+                                        bgColor='#ffffff' 
+                                    />
+                                    <Button icon={<ion-icon name="add-outline"></ion-icon>}
+                                        name='My List'
+                                        color='#ffffff' 
+                                        bgColor='#ff3700' 
+                                    />
+                                </div>
                             </div>
     );
 }
