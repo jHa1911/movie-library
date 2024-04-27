@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import './banner.css';
 import bgImg from '../pages/bg-transformer.jpg';
 import MovieContent from "../components/movieContent";
+import MovieDate from "../components/MovieDate";
 
 
 function Banner() {
@@ -29,9 +30,7 @@ function Banner() {
                             <MovieContent />
                         </div>
                         <div className="col-lg-6 col-md-12">
-                            <div className="date active">
-                                <h2>On 15th August</h2>
-                            </div>
+                            <MovieDate />
                             <div className="trailer d-flex align-items-center justify-content-center active">
                                 <a href="/" className="playBtn">
                                     <ion-icon name="play-outline"></ion-icon>
