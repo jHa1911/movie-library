@@ -1,12 +1,14 @@
 import './App.css';
 import Header from './pages/Header';
+import Banner from './pages/Banner';
 
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-    </div>
+      <Banner />
+    </>
   );
 }
 
