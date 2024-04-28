@@ -12,7 +12,7 @@ import 'swiper/css/effect-coverflow';
 // import Swiper core and required modules
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 
-function MovieSwiper({ slides }) {
+function MovieSwiper({ slides, slideChange }) {
     return (
         <Swiper
             effect={'coverflow'}
@@ -36,8 +36,8 @@ function MovieSwiper({ slides }) {
         >
             {
                 slides.map(slide => (
-                    <SwiperSlide>
-                        <img src={slide.previewImg} alt='Movie preview' />
+                    <SwiperSlide  key={slide._id}>
+                        <img src={slide.previewImg} alt='Movie preview' onClick={()=>{slideChange(slide._id)}} />
                     </SwiperSlide>
                 ))
             }
