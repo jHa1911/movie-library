@@ -5,16 +5,17 @@ import bgImg from '../pages/bg-transformer.jpg';
 import MovieContent from "../components/movieContent";
 import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
+import MovieSwiper from "../components/MovieSwiper";
 
 
 function Banner() {
     const [movies, setMovies] = useState([]);
     
     const fetchMovies = async () => {
-        fetch('http://localhost:3000/data/moviesData.json')
-            .then(response => response.json())
+        fetch('http://localhost:3000/data/movieData.json')
+            .then(res => res.json())
             .then(data => setMovies(data))
-            .catch(err => console.log(err));
+            .catch(e => console.log(e.message));
     };
 
     useEffect(() => {
@@ -37,8 +38,12 @@ function Banner() {
                     </div>
                 </div>
             </div>
+            {
+                movies && movies.length>0 && <MovieSwiper slides={movies} />
+            }
+            
         </div>
-    )
+    );
 }
 
 export default Banner;
